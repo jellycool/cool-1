@@ -1,0 +1,12 @@
+h1  add user
+form(name="adduser_form" method="POST" action="/addsearchuser")
+   p
+     span name:
+     input(id="name" name="name" type="text" )
+   p
+     span age:
+     input(id="age" name="age" type="number" )
+   p
+     td 
+       input(type="submit"  name="adduser" value="[增加]") 
+       input(type="submit"  name="searchuser" value="[查找]")

@@ -1,0 +1,11 @@
+h1  update user
+form(name="updateuser_form" method="POST" action="/updateuser")
+   input(id= "id"  name="oneuser[_id]" value="#{oneuser._id}" type="hidden")
+   p
+     span name:
+     input(id="name" name="oneuser[name]" value="#{oneuser.name}" type="text" )
+   p
+     span  age:
+     input(id="age" name="oneuser[age]" value="#{oneuser.age}" type="number" )
+   p
+     input(type="submit" value="修改")
