@@ -1,11 +1,30 @@
-h1  update user
-form(name="updateuser_form" method="POST" action="/updateuser")
-   input(id= "id"  name="oneuser[_id]" value="#{oneuser._id}" type="hidden")
+extends layout
+
+block content
+
+  h1  update user
+  div(style="padding: 10px 10px 10px;")
+  form(class="bs-example bs-example-form"  name="updateuser_form" method="POST" action="/updateuser")
    p
-     span name:
-     input(id="name" name="oneuser[name]" value="#{oneuser.name}" type="text" )
+     div(class="row")
+      div(class="col-lg-6")
+       div(class="input-group")
+        input(class="form-control" id= "id"  name="oneuser[_id]" value="#{oneuser._id}" type="hidden")
    p
-     span  age:
-     input(id="age" name="oneuser[age]" value="#{oneuser.age}" type="number" )
+     div(class="row")
+      div(class="col-lg-6")
+       div(class="input-group")
+        span(class="input-group-btn") 
+         bottom(class="btn btn-default" type="button") name:
+        input(class="form-control" id="name" name="oneuser[name]" value="#{oneuser.name}" type="text" )
    p
-     input(type="submit" value="修改")
+     div(class="row")
+      div(class="col-lg-6")
+       div(class="input-group")
+        span(class="input-group-btn") 
+         bottom(class="btn btn-default" type="button") age:
+        input(class="form-control" id="age" name="oneuser[age]" value="#{oneuser.age}" type="number" )
+   p
+     button(type="button" class="btn btn-default")       
+       span(class="glyphicon glyphicon-saved")  
+       input(class="form-control"  type="submit" value="修改")
