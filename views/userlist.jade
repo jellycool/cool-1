@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  table(border="3")
+   tr
+      th id
+      th name
+      th age
+      each user , index in userlist
+       tr  
+         td  
+          a(href='/update') #{user._id}
+         td=user.name 
+         td=user.age       
+          
+       
+     
+         
+     
+    
