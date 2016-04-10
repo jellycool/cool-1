@@ -1,25 +1,25 @@
 h1  add user
 div(style="padding: 10px 10px 10px;")
- form(class="bs-example bs-example-form" name="adduser_form" method="POST" action="/addsearchuser")
+ form(class="form-horizontal" name="adduser_form" method="POST" action="/addsearchuser")
    p
-     div(class="row")
-      div(class="col-lg-6")
-       div(class="input-group")
-        span(class="input-group-btn") 
-         bottom(class="btn btn-default" type="button") name:
-        input(class="form-control" id="name" name="name" type="text" placeholder="name")
+     div(class="form-group")
+       div(class="row")
+        label(class="col-lg-1 control-label" for="name") name:
+        div(class="col-lg-3")
+         input(class="form-control" id="name" name="name" type="text" value="name")
    p
-     div(class="row")
-      div(class="col-lg-6")
-       div(class="input-group")
-        span(class="input-group-btn") 
-         bottom(class="btn btn-default" type="button") age:
-        input(class="form-control" id="age" name="age" type="number" placeholder="age")
+     div(class="form-group")
+       div(class="row")
+        label(class="col-lg-1 control-label" for="age") age:
+        div(class="col-lg-3")
+         input(class="form-control" id="age" name="age" type="number" value=18)
    p
-     div(class="btn-group") 
-      button(type="button" class="btn btn-default")       
-       span(class="glyphicon glyphicon-plus")  
-       input(class="form-control" type="submit"  name="adduser" value="增加") 
-      button(type="button" class="btn btn-default")       
-       span(class="glyphicon glyphicon-check")  
-       input(class="form-control" type="submit"  name="searchuser" value="查找")
+     div(class="form-group") 
+      div(class="row")
+       div(class="col-lg-offset-1 col-lg-3")
+        button(type="button" class="btn btn-default")              
+          span(class="glyphicon glyphicon-plus")
+          input(class="form-control" type="submit"  name="adduser" value="增加") 
+        button(type="button" class="btn btn-default")       
+          span(class="glyphicon glyphicon-check")  
+          input(class="form-control" type="submit"  name="searchuser" value="查找")
